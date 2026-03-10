@@ -1,0 +1,155 @@
+HRP_GitHub$ tree
+.
+├── bots
+│   ├── adam
+│   │   ├── config.ts
+│   │   ├── media
+│   │   ├── persona.ts
+│   │   ├── profile.json
+│   │   └── workspace
+│   ├── amelia
+│   │   ├── config.json
+│   │   ├── config.ts
+│   │   ├── media
+│   │   │   └── Gemini_Generated_Image_sr6uivsr6uivsr6u.png
+│   │   ├── persona.ts
+│   │   └── profile.json
+│   └── _template
+│       ├── config.ts
+│       └── persona.ts
+├── components.json
+├── example.env.example
+├── next.config.mjs
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── prisma
+│   └── schema.prisma
+├── public
+│   └── avatars
+│       ├── adam.jpg
+│       └── amelia.jpg
+├── setup.py
+├── src
+│   ├── app
+│   │   ├── actions.ts
+│   │   ├── api
+│   │   │   ├── hive
+│   │   │   │   └── route.ts
+│   │   │   └── media
+│   │   │       └── route.ts
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components
+│   │   ├── analytics-view.tsx
+│   │   ├── bot-config-view.tsx
+│   │   ├── bot-journal.tsx
+│   │   ├── bot-local-settings.tsx
+│   │   ├── bot-portfolio.tsx
+│   │   ├── bot-row.tsx
+│   │   ├── cognitive-telemetry.tsx
+│   │   ├── dashboard-refresher.tsx
+│   │   ├── database-view.tsx
+│   │   ├── hive-mind-view.tsx
+│   │   ├── live-activity-view.tsx
+│   │   ├── mind-stream.tsx
+│   │   ├── mission-control.tsx
+│   │   ├── overview-stats.tsx
+│   │   ├── page-wrapper.tsx
+│   │   ├── personas-tab.tsx
+│   │   ├── proxy-manager-view.tsx
+│   │   ├── session-manager.tsx
+│   │   ├── settings-view.tsx
+│   │   ├── sidebar-context.tsx
+│   │   ├── sidebar.tsx
+│   │   ├── toolbox-view.tsx
+│   │   ├── tool-installer-modal.tsx
+│   │   └── ui
+│   │       ├── alert.tsx
+│   │       ├── avatar.tsx
+│   │       ├── badge.tsx
+│   │       ├── button.tsx
+│   │       ├── card.tsx
+│   │       ├── dialog.tsx
+│   │       ├── dropdown-menu.tsx
+│   │       ├── input.tsx
+│   │       ├── label.tsx
+│   │       ├── progress.tsx
+│   │       ├── scroll-area.tsx
+│   │       ├── select.tsx
+│   │       ├── separator.tsx
+│   │       ├── sheet.tsx
+│   │       ├── slider.tsx
+│   │       ├── switch.tsx
+│   │       ├── table.tsx
+│   │       ├── tabs.tsx
+│   │       └── textarea.tsx
+│   ├── core
+│   │   ├── agent-manager.ts
+│   │   ├── bot-instance.ts
+│   │   ├── brain
+│   │   │   ├── appraisal-engine.ts
+│   │   │   ├── drives-manager.ts
+│   │   │   ├── episodic-manager.ts
+│   │   │   ├── mcp-manager.ts
+│   │   │   ├── narrative-engine.ts
+│   │   │   ├── narrative-types.ts
+│   │   │   ├── system-one.ts
+│   │   │   ├── system-three.ts
+│   │   │   └── system-two.ts
+│   │   ├── context
+│   │   │   ├── cognitive-engine.ts
+│   │   │   ├── knowledge-manager.ts
+│   │   │   ├── news-manager.ts
+│   │   │   ├── news-service.ts
+│   │   │   ├── social-brain.ts
+│   │   │   ├── time-manager.ts
+│   │   │   └── weather-service.ts
+│   │   ├── db.ts
+│   │   ├── hive-service.ts
+│   │   ├── loader.ts
+│   │   ├── senses
+│   │   │   └── vision-service.ts
+│   │   ├── services
+│   │   │   ├── agentic-loop-service.ts
+│   │   │   ├── bio-rhythm-service.ts
+│   │   │   ├── bot-config-service.ts
+│   │   │   ├── brain-interaction-service.ts
+│   │   │   ├── life-loop.ts
+│   │   │   ├── monitoring-service.ts
+│   │   │   ├── plugin-service.ts
+│   │   │   ├── protocol-service.ts
+│   │   │   ├── proxy-service.ts
+│   │   │   └── use-toolbox.ts
+│   │   ├── types.ts
+│   │   └── weather-service.ts
+│   ├── engine
+│   │   ├── actor
+│   │   │   └── publisher.ts
+│   │   ├── browser.ts
+│   │   ├── drivers
+│   │   │   └── instagram.ts
+│   │   └── utils.ts
+│   ├── lib
+│   │   └── utils.ts
+│   └── plugins
+│       ├── base-plugin.ts
+│       ├── hive-communicator
+│       │   └── index.ts
+│       ├── internet-search
+│       │   └── index.ts
+│       ├── local-fs
+│       │   └── index.ts
+│       ├── system-coder
+│       │   └── index.ts
+│       └── tool-forge
+│           └── index.ts
+├── tailwind.config.ts
+└── tsconfig.json
+
+32 directories, 116 files
+shadowhunter@sara:/media/shadowhunter/5b8b42b8-f241-4fe5-a9af-8955eec713d2/HRP_GitHub$ 
+
+

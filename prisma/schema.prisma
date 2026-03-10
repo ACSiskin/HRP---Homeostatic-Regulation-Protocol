@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model BotState {
+  id              String   @id @default(uuid())
+  name            String   @unique
+  status          String   @default("IDLE")
+  lastActive      DateTime @default(now())
+  hasValidSession Boolean  @default(false)
+  logs            Log[]
+  activities      Activity[]
+}
+
+model Log {
+  id        String   @id @default(uuid())
+  botId     String
+  bot       BotState @relation(fields: [botId], references: [id], onDelete: Cascade)
+  level     String
+  message   String
+  createdAt DateTime @default(now())
+}
+
+model Activity {
+  id        String   @id @default(uuid())
+  botId     String
+  bot       BotState @relation(fields: [botId], references: [id], onDelete: Cascade)
+  type      String
+  details   String?
+  createdAt DateTime @default(now())
+}
+
+model SystemConfig {
+  idKey           String   @id @default("global")
+  isProxyLocked   Boolean  @default(false)
+  currentBotName  String?
+  lastRotation    DateTime @default(now())
+}
