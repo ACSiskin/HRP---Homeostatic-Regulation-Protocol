@@ -4,6 +4,7 @@ import subprocess
 import shutil
 import time
 import platform
+import getpass
 
 # --- Configuration ---
 ENV_EXAMPLE_FILE = "example.env.example"
@@ -136,7 +137,7 @@ def setup_env():
             with open(ENV_FILE, "w") as f:
                 f.write('DATABASE_URL="file:./dev.db"\nOPENAI_API_KEY=\nGROK_API_KEY=\n')
 
-print("\n--- API KEYS CONFIGURATION ---")
+    print("\n--- API KEYS CONFIGURATION ---")
     print("MIND_OS requires API keys to function autonomously.")
     openai_key = getpass.getpass("Enter your OPENAI_API_KEY (or press Enter to skip/keep existing): ").strip()
     grok_key = getpass.getpass("Enter your GROK_API_KEY (or press Enter to skip/keep existing): ").strip()
