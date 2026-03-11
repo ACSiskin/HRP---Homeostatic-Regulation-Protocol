@@ -137,11 +137,9 @@ def setup_env():
                 f.write('DATABASE_URL="file:./dev.db"\nOPENAI_API_KEY=\nGROK_API_KEY=\n')
 
 print("\n--- API KEYS CONFIGURATION ---")
-print("MIND_OS requires API keys to function autonomously.")
-
-
-openai_key = getpass.getpass("Enter your OPENAI_API_KEY (or press Enter to skip/keep existing): ").strip()
-grok_key = getpass.getpass("Enter your GROK_API_KEY (or press Enter to skip/keep existing): ").strip()
+    print("MIND_OS requires API keys to function autonomously.")
+    openai_key = getpass.getpass("Enter your OPENAI_API_KEY (or press Enter to skip/keep existing): ").strip()
+    grok_key = getpass.getpass("Enter your GROK_API_KEY (or press Enter to skip/keep existing): ").strip()
 
     # Read current .env
     with open(ENV_FILE, "r") as f:
