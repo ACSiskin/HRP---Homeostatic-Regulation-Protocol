@@ -25,6 +25,20 @@ def print_logo():
   =========================================
     """
     print(logo)
+    
+    disclaimer = """
+  [!] IMPORTANT DISCLAIMER: 
+  MIND_OS v1.0 is a foundational R&D environment, NOT a commercial product.
+  This software is governed by a strict custom license restricting it to 
+  personal, internal, and non-commercial research purposes ONLY.
+    """
+    print(disclaimer)
+
+def confirm_installation():
+    response = input("\nDo you acknowledge the R&D license and wish to proceed with the installation? [y/N]: ").strip().lower()
+    if response not in ['y', 'yes']:
+        print("\n[X] Installation aborted by user. Please review the LICENSE file for more details.")
+        sys.exit(0)
 
 def print_step(msg):
     print(f"\n[*] {msg}")
@@ -162,6 +176,18 @@ def setup_prisma_db():
     else:
         print_error("Failed to push schema to the database.")
 
+def seed_database():
+    print_step("Synchronizing local entities with the database...")
+    if not os.path.exists("prisma/seed.js"):
+         print_warning("Seed script (prisma/seed.js) not found. Skipping entity synchronization.")
+         return
+
+    print("--> Executing seed script...")
+    if run_command(["node", "prisma/seed.js"]):
+        print_success("Entities synchronized successfully.")
+    else:
+        print_warning("Failed to synchronize entities. You may need to add them manually via UI.")
+
 def finish():
     print_step("Installation Sequence Complete!")
     summary = """
@@ -182,10 +208,12 @@ if __name__ == "__main__":
     try:
         print_logo()
         time.sleep(1)
+        confirm_installation()
         check_dependencies()
         install_npm_packages()
         setup_env()
         setup_prisma_db()
+        seed_database()
         finish()
     except KeyboardInterrupt:
         print("\n[X] Installation aborted by user.")
